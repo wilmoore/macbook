@@ -89,6 +89,12 @@ pass "homebrew install successful"
 # install core tools via homebrew
 ################################################################################
 
+say "Installing ag for better code search"
+  brew install ag
+
+say "Installing tree for viewing directory hierarchies"
+  brew install tree
+
 say "Installing wget"
   brew install wget
 
