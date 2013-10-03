@@ -1,0 +1,148 @@
+################################################################################
+# My System Bootstrap Script
+# Wil Moore III <wil.moore@wilmoore.com>
+# 
+# Installs: 
+#   - homebrew
+#   - ansible
+# 
+# This is meant to be invoked via:
+# % sh < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
+#  
+#!/usr/bin/env bash
+################################################################################
+
+set -e
+
+################################################################################
+# output functions
+################################################################################
+
+say () {
+	printf "\r [ \033[00;34m..\033[0m ] $1\n"
+}
+
+ask () {
+	printf "\r [ \033[0;33m??\033[0m ] $1\n"
+}
+
+pass () {
+	printf "\r\033[2K [ \033[00;32mOK\033[0m ] $1\n"
+}
+
+fail () {
+	printf "\r\033[2K [\033[0;31mFAIL\033[0m] $1\n"
+	echo ''
+	exit
+}
+
+################################################################################
+# set default shell to "Zsh"
+################################################################################
+
+# check current shell on OSX via: dscl localhost -read /Local/Default/Users/$USER shell | awk '{ print $NF }'
+# todo: make this idempotent
+# todo: more granular error handling
+
+function set_shell() {
+  local target_shell=$(command -v $1)
+
+  chsh -s $target_shell 2>/dev/null
+
+  return $?
+}
+
+#say "About to set set default shell to zsh"
+#set_shell zsh || fail "Unable to set shell to zsh"
+#pass "Successfully set shell to zsh"
+
+################################################################################
+# dotfiles
+################################################################################
+
+bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
+exit
+
+################################################################################
+# install homebrew
+################################################################################
+
+# see: http://ascarter.net/2010/02/22/homebrew-for-os-x.html
+# todo: skip on non-osx
+# todo: make this idempotent
+# todo: more granular error handling
+
+function install_homebrew() {
+  HOMEBREW_PREFIX=$HOME/.homebrew
+
+  test -d $HOMEBREW_PREFIX && say "homebrew was previously installed, nothing to do." && return 0
+
+  mkdir -p $HOMEBREW_PREFIX
+
+  curl -#L http://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOMEBREW_PREFIX || return 1
+
+  sudo sh -c "echo '$HOMEBREW_PREFIX/bin'       > /etc/paths.d/homebrew"    || return 1
+  sudo sh -c "echo '$HOMEBREW_PREFIX/share/man' > /etc/manpaths.d/homebrew" || return 1
+
+  export PATH="$HOMEBREW_PREFIX/bin:$PATH"
+
+  brew update
+
+  return $?
+}
+
+say "About to install homebrew"
+install_homebrew || fail "Unable to install homebrew"
+pass "homebrew install successful"
+
+################################################################################
+# install core tools via homebrew
+################################################################################
+
+say "Installing wget"
+  brew install wget
+
+say "Installing git"
+  brew install git
+
+say "Installing vim"
+  brew install vim macvim
+
+say "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
+  brew install ctags
+
+say "Installing tmux, to save project state and switch between projects ..."
+  brew install tmux
+
+say "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compatibility with tmux ..."
+  brew install reattach-to-user-namespace
+
+say "Installing watch, to execute a program periodically and show the output ..."
+  brew install watch
+
+################################################################################
+# install programming languages
+################################################################################
+
+say "Installing nvm, the node version manager"
+  test -d ~/.nvm || git clone https://github.com/creationix/nvm.git ~/.nvm
+  source ~/.nvm/nvm.sh
+
+say "Installing latest version of node"
+  nvm install $(nvm ls-remote | tail -1)
+
+
+
+
+# this is where we should likely branch on operating system (OSX vs Linux/Ubuntu) (see cowboy's setup for this)
+
+# https://developer.apple.com/downloads/index.action
+# https://itunes.apple.com/us/app/xcode/id497799835
+
+# https://help.github.com/articles/set-up-git#password-caching
+
+# say "we are going to do something"
+# ask "we just finished doing something"
+# pass "doing something was a success"
+# fail "we are done"
+
