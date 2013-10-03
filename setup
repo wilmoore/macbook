@@ -127,7 +127,7 @@ if [[ -d $NVM_ROOT ]]; then
   
   git pull 2>/dev/null
   
-  if $?; then
+  if [[ $? ]]; then
     pass "nvm updated succesfully"
   else
     fail "failed to update ($NVM_ROOT)"
@@ -136,7 +136,7 @@ if [[ -d $NVM_ROOT ]]; then
 else
   git clone https://github.com/creationix/nvm.git $NVM_ROOT 2>/dev/null
   
-  if $?; then
+  if [[ $? ]]; then
     pass "installed succesfully"
   else
     fail "failed to install nvm to ($NVM_ROOT)"
