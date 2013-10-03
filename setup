@@ -49,16 +49,14 @@ fail () {
 
 bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
 
-exit
-
 ################################################################################
 # install homebrew
 ################################################################################
 
+#
+# install homebrew
 # see: http://ascarter.net/2010/02/22/homebrew-for-os-x.html
-# todo: skip on non-osx
-# todo: make this idempotent
-# todo: more granular error handling
+#
 
 function install_homebrew() {
   HOMEBREW_PREFIX=$HOME/.homebrew
