@@ -116,15 +116,37 @@ say "Installing watch, to execute a program periodically and show the output ...
 # install programming languages (nvm + node)
 ################################################################################
 
-say "Installing nvm, the node version manager"
-  test -d ~/.nvm || git clone https://github.com/creationix/nvm.git ~/.nvm
+say "Preparing to install nvm (Node.js version manager)"
+
+NVM_ROOT=$HOME/.nvm
+
+if [[ -d $NVM_ROOT ]]; then
+  say "nvm seems to have been previously installed...preparing to update!"
   
-  if [[ -f $HOME/.nvm/nvm.sh ]]; then
-    source $HOME/.nvm/nvm.sh
-    
-    say "Installing latest version of node"
-      nvm install $(nvm ls-remote | tail -1)
+  cd $NVM_ROOT
+  
+  git pull 2>/dev/null
+  
+  if $?; then
+    pass "nvm updated succesfully"
+  else
+    fail "failed to update ($NVM_ROOT)"
   fi
+  
+else
+  git clone https://github.com/creationix/nvm.git $NVM_ROOT 2>/dev/nu..
+  
+  if $?; then
+    pass "installed succesfully"
+  else
+    fail "failed to install nvm to ($NVM_ROOT)"
+  fi
+  
+fi
+
+say "In order to load nvm, you'll need to add 'source $NVM_ROOT/nvm.sh' to your shell profile"
+
+
 
 
 # this is where we should likely branch on operating system (OSX vs Linux/Ubuntu) (see cowboy's setup for this)
