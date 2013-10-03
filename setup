@@ -16,9 +16,7 @@
 #  - make this script configurable (i.e. less opinionated)
 # 
 # This is meant to be invoked via:
-# % sh < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
-#  
-#!/usr/bin/env bash
+# bash < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
 ################################################################################
 
 set -e
