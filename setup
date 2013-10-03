@@ -134,7 +134,7 @@ if [[ -d $NVM_ROOT ]]; then
   fi
   
 else
-  git clone https://github.com/creationix/nvm.git $NVM_ROOT 2>/dev/nu..
+  git clone https://github.com/creationix/nvm.git $NVM_ROOT 2>/dev/null
   
   if $?; then
     pass "installed succesfully"
