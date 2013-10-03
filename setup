@@ -141,24 +141,23 @@ else
   else
     fail "failed to install nvm to ($NVM_ROOT)"
   fi
-  
-fi
 
-say "In order to load nvm, you'll need to add 'source $NVM_ROOT/nvm.sh' to your shell profile"
+  say "In order to load nvm, you'll need to add 'source $NVM_ROOT/nvm.sh' to your shell profile"
+    
+  if [[ -f $NVM_ROOT/nvm.sh ]]; then
+    say "Preparing to install latest version of node"
   
-if [[ -f $NVM_ROOT/nvm.sh ]]; then
-  say "Preparing to install latest version of node"
-
-  source $NVM_ROOT/nvm.sh
-
-  LATEST_NODE=$(nvm ls-remote | tail -1)
+    source $NVM_ROOT/nvm.sh
   
-  nvm install $LATEST_NODE
-  
-  say "Making Node version the default"
-  
-  nvm alias default $LATEST_NODE
-  nvm use default
+    LATEST_NODE=$(nvm ls-remote | tail -1)
+    
+    nvm install $LATEST_NODE
+    
+    say "Making Node version the default"
+    
+    nvm alias default $LATEST_NODE
+    nvm use default
+  fi
 fi
 
 
