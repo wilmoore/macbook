@@ -111,6 +111,9 @@ say "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compat
 
 say "Installing watch, to execute a program periodically and show the output ..."
   brew install watch
+  
+say "Installing ruby-install, to install rubies"
+  brew install ruby-install
 
 ################################################################################
 # install programming languages (nvm + node)
