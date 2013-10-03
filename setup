@@ -113,17 +113,18 @@ say "Installing watch, to execute a program periodically and show the output ...
   brew install watch
 
 ################################################################################
-# install programming languages
+# install programming languages (nvm + node)
 ################################################################################
 
 say "Installing nvm, the node version manager"
   test -d ~/.nvm || git clone https://github.com/creationix/nvm.git ~/.nvm
-  source ~/.nvm/nvm.sh
-
-say "Installing latest version of node"
-  nvm install $(nvm ls-remote | tail -1)
-
-
+  
+  if [[ -f $HOME/.nvm/nvm.sh ]]; then
+    source $HOME/.nvm/nvm.sh
+    
+    say "Installing latest version of node"
+      nvm install $(nvm ls-remote | tail -1)
+  fi
 
 
 # this is where we should likely branch on operating system (OSX vs Linux/Ubuntu) (see cowboy's setup for this)
