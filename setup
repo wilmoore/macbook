@@ -4,7 +4,6 @@
 # 
 # Tasks:
 #
-#  - switch shell to "Zsh"
 #  - install dotfiles from `github.com/wilmoore/dotfiles`
 #  - install homebrew
 #  - install core utilities via homebrew
@@ -47,30 +46,11 @@ fail () {
 }
 
 ################################################################################
-# set default shell to "Zsh"
-################################################################################
-
-# check current shell on OSX via: dscl localhost -read /Local/Default/Users/$USER shell | awk '{ print $NF }'
-# todo: make this idempotent
-# todo: more granular error handling
-
-function set_shell() {
-  local target_shell=$(command -v $1)
-
-  chsh -s $target_shell 2>/dev/null
-
-  return $?
-}
-
-#say "About to set set default shell to zsh"
-#set_shell zsh || fail "Unable to set shell to zsh"
-#pass "Successfully set shell to zsh"
-
-################################################################################
-# dotfiles
+# install dotfiles from `github.com/wilmoore/dotfiles`
 ################################################################################
 
 bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
+
 exit
 
 ################################################################################
