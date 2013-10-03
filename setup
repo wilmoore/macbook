@@ -145,8 +145,14 @@ else
 fi
 
 say "In order to load nvm, you'll need to add 'source $NVM_ROOT/nvm.sh' to your shell profile"
-
-
+  
+if [[ -f $NVM_ROOT/nvm.sh ]]; then
+  say "Preparing to install latest version of node"
+  
+  source $NVM_ROOT/nvm.sh
+  
+  nvm install $(nvm ls-remote | tail -1)
+fi
 
 
 # this is where we should likely branch on operating system (OSX vs Linux/Ubuntu) (see cowboy's setup for this)
