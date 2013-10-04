@@ -178,4 +178,8 @@ fi
 # fin
 ################################################################################
 
+say  "If any of the setup steps prompted you to restart immediately, you can type the following:"
+say  "shutdown -nr"
+say  ""
+
 pass "system setup successfully completed"
