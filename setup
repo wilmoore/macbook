@@ -51,6 +51,8 @@ bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
 #
 # install homebrew
 # see: http://ascarter.net/2010/02/22/homebrew-for-os-x.html
+# todo: extract this out into another script next to this one (init-homebrew)
+# todo: a `.homebrews` dotfile should drive what is installed
 #
 
 function install_homebrew() {
