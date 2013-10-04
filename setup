@@ -114,6 +114,7 @@ say "Installing watch, to execute a program periodically and show the output ...
   
 say "Installing ruby-install, to install rubies"
   brew install ruby-install
+  ruby-install ruby
 
 ################################################################################
 # install programming languages (nvm + node)
