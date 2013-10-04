@@ -10,11 +10,6 @@
 #  - install version managers for programming languages
 #  - install programming languages
 # 
-# Potential future enhancement(s):
-#
-#  - convert this script to ansible
-#  - make this script configurable (i.e. less opinionated)
-# 
 # This is meant to be invoked via:
 # bash < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
 ################################################################################
