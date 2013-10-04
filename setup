@@ -9,6 +9,10 @@
 #  - install core utilities via homebrew
 #  - install version managers for programming languages
 #  - install programming languages
+#
+# Todo:
+#
+#  - run w/ a parameter to honor username or use defaults (wilmoore)
 # 
 # This is meant to be invoked via:
 # bash < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
