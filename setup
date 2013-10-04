@@ -121,13 +121,17 @@ say "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compat
 
 say "Installing watch, to execute a program periodically and show the output ..."
   brew install watch
+
+################################################################################
+# install programming languages (ruby-build + chruby) => Ruby
+################################################################################
   
 say "Installing chruby and ruby-install, to install rubies"
   brew install ruby-build chruby
   [[ ! -d ~/.rubies/2.0.0-p247 ]] && ruby-build 2.0.0-p247 ~/.rubies/2.0.0-p247
 
 ################################################################################
-# install programming languages (nvm + node)
+# install programming languages (nvm) => Node.js
 ################################################################################
 
 say "Preparing to install nvm (Node.js version manager)"
@@ -173,6 +177,17 @@ else
     nvm use default
   fi
 fi
+
+################################################################################
+# TODO (other programming language environments)
+################################################################################
+
+# scala
+# clojure
+# erlang
+# elixir
+# lua
+# php
 
 ################################################################################
 # fin
