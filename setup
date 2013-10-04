@@ -160,16 +160,3 @@ else
   fi
 fi
 
-
-# this is where we should likely branch on operating system (OSX vs Linux/Ubuntu) (see cowboy's setup for this)
-
-# https://developer.apple.com/downloads/index.action
-# https://itunes.apple.com/us/app/xcode/id497799835
-
-# https://help.github.com/articles/set-up-git#password-caching
-
-# say "we are going to do something"
-# ask "we just finished doing something"
-# pass "doing something was a success"
-# fail "we are done"
-
