@@ -110,7 +110,7 @@ say "Installing watch, to execute a program periodically and show the output ...
   
 say "Installing chruby and ruby-install, to install rubies"
   brew install ruby-build chruby
-  ruby-build 2.0.0-p247 ~/.rubies/2.0.0-p247
+  [[ ! -d ~/.rubies/2.0.0-p247 ]] && ruby-build 2.0.0-p247 ~/.rubies/2.0.0-p247
 
 ################################################################################
 # install programming languages (nvm + node)
@@ -160,3 +160,8 @@ else
   fi
 fi
 
+################################################################################
+# fin
+################################################################################
+
+pass "system setup successfully completed"
