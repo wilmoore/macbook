@@ -179,7 +179,7 @@ fi
 ################################################################################
 
 say  "If any of the setup steps prompted you to restart immediately, you can type the following:"
-say  "sudo shutdown -r"
+say  "sudo reboot"
 say  ""
 
 pass "system setup successfully completed"
