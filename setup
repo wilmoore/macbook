@@ -94,7 +94,7 @@ say "Installing git"
   brew install git
 
 say "Installing vim"
-  brew install vim macvim
+  brew install vim macvim vimpager
 
 say "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
   brew install ctags
