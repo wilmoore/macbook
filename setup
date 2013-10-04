@@ -73,6 +73,7 @@ function install_homebrew() {
   export PATH="$HOMEBREW_PREFIX/bin:$PATH"
 
   brew update
+  brew upgrade
 
   return $?
 }
