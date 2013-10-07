@@ -12,6 +12,7 @@
 #
 # Todo:
 #  
+#  - vagrant
 #  - if a url does not respond, do not continue:
 #  (i.e. curl -sI https://raw.github.com/wilmoore/dotfiles/master/setup | grep -E '^HTTP/' | awk '{ print $NF }')
 #  - run w/ a parameter to honor username or use defaults (wilmoore)
