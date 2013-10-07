@@ -92,10 +92,10 @@ install_homebrew || fail "Unable to install homebrew"
 pass "homebrew install successful"
 
 ################################################################################
-# tab homebrew dupes
+# tap homebrew dupes
 ################################################################################
 
-say "Adding homebrew dupes"
+say "Tapping dupes"
   brew tap homebrew/dupes
 
 ################################################################################
