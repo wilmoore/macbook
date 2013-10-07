@@ -1,6 +1,20 @@
 # System setup for polyglot developers
 
-Automated system setup for developers. Like boxen, but without a complicated CM tool.
+Automated system setup for developers.
+
+## What is this and who is it for?
+
+If you've found boxen but were afraid of it because it seems complicated, this is probably for you. 
+
+This is somewhat like boxen, but **without** a complicated configuration managament tool (i.e. Puppet) calling the shots.
+
+When I initially started this, I thought I was going to use ansible because it is much simpler than Puppet or Chef; however,
+
+I quickly realized, that was silly. Most of these installations are super simple, I'm only ever going to perform the install
+
+on a macbook (would you ever go from developing on a mac to anything else?), and even with a fancy tool, you'd have to find 
+
+a special plugin or write it yourself to achieve idempotency (the main claim to fame of these CM tools).
 
 ## Install
 
