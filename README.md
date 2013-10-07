@@ -1,3 +1,10 @@
+# Automated polyglot developer system setup.
+
+Automated developer system setup without a complicated CM tool.
+
+## Install
+
+    % bash < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
 
 ## Inspiration
 
@@ -6,3 +13,7 @@
 - [pengwynn/dotfiles](https://github.com/pengwynn/dotfiles)
 - [meskyanichi/dotfiles](https://github.com/meskyanichi/dotfiles)
 - [boxen](https://github.com/boxen/our-boxen)
+
+## LICENSE
+
+  MIT
