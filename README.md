@@ -1,6 +1,6 @@
 # System setup for polyglot developers
 
-Automated system setup for developers.
+Automated system setup for developers with idempotency (i.e. run it as many times as you like...no harm will be done).
 
 ## What is this and who is it for?
 
