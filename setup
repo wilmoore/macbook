@@ -89,14 +89,14 @@ fi
 ################################################################################
 
 say "Tapping dupes"
-  brew tap --repair homebrew/dupes | head -1 | grep -sqE '^Pruned 0' && brew tap homebrew/dupes
+  brew tap --repair homebrew/dupes 2>/dev/null | head -1 | grep -sqE '^Pruned 0' || brew tap homebrew/dupes
 
 ################################################################################
 # tap homebrew binaries
 ################################################################################
 
 say "Tapping binaries"
-  brew tap --repair wilmoore/homebrew-binaries | head -1 | grep -sqE '^Pruned 0' && brew tap wilmoore/homebrew-binaries
+  brew tap --repair wilmoore/homebrew-binaries 2>/dev/null | head -1 | grep -sqE '^Pruned 0' || brew tap wilmoore/homebrew-binaries
 
 ################################################################################
 # install core tools via homebrew
@@ -193,7 +193,7 @@ fi
 ################################################################################
 
 say "Tapping homebrew-php"
-  brew tap --repair josegonzalez/homebrew-php | head -1 | grep -sqE '^Pruned 0' && brew tap josegonzalez/homebrew-php
+  brew tap --repair josegonzalez/homebrew-php 2>/dev/null | head -1 | grep -sqE '^Pruned 0' || brew tap josegonzalez/homebrew-php
   
 say "Installing PHP"
   brew install php55 --without-pear --without-apache --with-pgsql --with-fpm  --with-intl
