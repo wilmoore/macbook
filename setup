@@ -92,6 +92,13 @@ install_homebrew || fail "Unable to install homebrew"
 pass "homebrew install successful"
 
 ################################################################################
+# tab homebrew dupes
+################################################################################
+
+say "Adding homebrew dupes"
+  brew tap homebrew/dupes
+
+################################################################################
 # install core tools via homebrew
 ################################################################################
 
