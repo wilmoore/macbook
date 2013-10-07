@@ -1,6 +1,6 @@
-# Automated polyglot developer system setup.
+# Automated system setup for polyglot developers
 
-Automated developer system setup without a complicated CM tool.
+Automated system setup for developers without a complicated CM tool.
 
 ## Install
 
