@@ -1,6 +1,6 @@
-# Automated system setup for polyglot developers
+# System setup for polyglot developers
 
-Automated system setup for developers without a complicated CM tool.
+Automated system setup for developers. Like boxen, but without a complicated CM tool.
 
 ## Install
 
