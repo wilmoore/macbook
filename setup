@@ -54,10 +54,6 @@ bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
 # install homebrew @ $HOME
 ################################################################################
 
-#
-# install homebrew @ $HOME
-#
-
 bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go)
 
 ################################################################################
