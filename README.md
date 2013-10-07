@@ -11,7 +11,9 @@ If you've found boxen but were afraid of it because it seems complicated, this i
 - Mac OSX system updates
 - dotfiles from `github.com/wilmoore/dotfiles`
 - homebrew
-    - ag
+    - ag, tree, wget, watch
+    - ctags, tmux, git, reattach-to-user-namespace
+    - vim macvim vimpager
     - phantomjs
 - version managers for programming languages
     - nvm / Node.js
