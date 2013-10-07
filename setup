@@ -93,9 +93,19 @@ say "Tapping dupes"
   brew tap --repair homebrew/dupes | head -1 | grep -sqE '^Pruned 0' && brew tap homebrew/dupes
 
 ################################################################################
+# tap homebrew binaries
+################################################################################
+
+say "Tapping binaries"
+  brew tap --repair wilmoore/homebrew-binaries | head -1 | grep -sqE '^Pruned 0' && brew tap wilmoore/homebrew-binaries
+
+################################################################################
 # install core tools via homebrew
 ################################################################################
 
+say "Installing phantomjs"
+  brew install phantom-js
+  
 say "Installing ag for better code search"
   brew install ag
 
