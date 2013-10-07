@@ -208,6 +208,9 @@ say "Installing PHP"
 # erlang
 # elixir
 # lua
+# perl
+# groovy
+# mono (F#, C#)
 
 ################################################################################
 # system update
