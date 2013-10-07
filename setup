@@ -90,7 +90,7 @@ pass "homebrew install successful"
 ################################################################################
 
 say "Tapping dupes"
-  brew tap homebrew/dupes
+  brew tap --repair homebrew/dupes | head -1 | grep -sqE '^Pruned 0' && brew tap homebrew/dupes
 
 ################################################################################
 # install core tools via homebrew
@@ -184,8 +184,8 @@ fi
 ################################################################################
 
 say "Tapping homebrew-php"
-  brew tap josegonzalez/homebrew-php
-
+  brew tap --repair josegonzalez/homebrew-php | head -1 | grep -sqE '^Pruned 0' && brew tap josegonzalez/homebrew-php
+  
 say "Installing PHP"
   brew install php55
 
