@@ -197,7 +197,8 @@ say "Tapping homebrew-php"
   brew tap --repair josegonzalez/homebrew-php | head -1 | grep -sqE '^Pruned 0' && brew tap josegonzalez/homebrew-php
   
 say "Installing PHP"
-  brew install php55
+  brew install php55 --without-pear --without-apache --with-pgsql --with-fpm  --with-intl
+  brew unlink php55
 
 ################################################################################
 # TODO (other programming language environments)
