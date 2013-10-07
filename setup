@@ -61,29 +61,24 @@ bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
 # todo: a `.homebrews` dotfile should drive what is installed
 #
 
-function install_homebrew() {
-  HOMEBREW_PREFIX=$HOME/.homebrew
+say "Preparing to install homebrew"
 
-  test -d $HOMEBREW_PREFIX && say "homebrew was previously installed, nothing to do." && return 0
+HOMEBREW_PREFIX=$HOME/.homebrew
 
+if [[ -d $HOMEBREW_PREFIX ]]; then
+  say "homebrew was previously installed, nothing to do."
+else
   mkdir -p $HOMEBREW_PREFIX
-
-  curl -#L http://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOMEBREW_PREFIX || return 1
-
-  sudo sh -c "echo '$HOMEBREW_PREFIX/bin'       > /etc/paths.d/homebrew"    || return 1
-  sudo sh -c "echo '$HOMEBREW_PREFIX/share/man' > /etc/manpaths.d/homebrew" || return 1
-
+  
+  curl -#fsSL http://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOMEBREW_PREFIX || fail "Unable to install homebrew"
+  
   export PATH="$HOMEBREW_PREFIX/bin:$PATH"
-
+  
   brew update
   brew upgrade
-
-  return $?
-}
-
-say "About to install homebrew"
-install_homebrew || fail "Unable to install homebrew"
-pass "homebrew install successful"
+  
+  pass "homebrew install successful"
+fi
 
 ################################################################################
 # tap homebrew dupes
