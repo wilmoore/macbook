@@ -51,38 +51,14 @@ fail () {
 bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
 
 ################################################################################
-# install homebrew
+# install homebrew @ $HOME
 ################################################################################
 
 #
-# install homebrew
-# see: http://ascarter.net/2010/02/22/homebrew-for-os-x.html
-# todo: extract this out into another script next to this one (init-homebrew)
-# todo: a `.homebrews` dotfile should drive what is installed
+# install homebrew @ $HOME
 #
 
-say "Preparing to install homebrew"
-
-HOMEBREW_PREFIX=$HOME/.homebrew
-
-if [[ -d $HOMEBREW_PREFIX ]]; then
-  say "homebrew was previously installed, nothing to do."
-else
-  mkdir -p $HOMEBREW_PREFIX
-  
-  curl -#fsSL http://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOMEBREW_PREFIX || fail "Unable to install homebrew"
-  
-  export PATH="$HOMEBREW_PREFIX/bin:$PATH"
-  
-  brew update
-  brew upgrade
-  
-  say  'Add the following to your $PATH and $MANPATH respectively'
-  say  "$HOMEBREW_PREFIX/bin"
-  say  "$HOMEBREW_PREFIX/share/man"
-  
-  pass "homebrew install successful"
-fi
+bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go)
 
 ################################################################################
 # tap homebrew dupes
@@ -100,6 +76,7 @@ say "Tapping binaries"
 
 ################################################################################
 # install core tools via homebrew
+# todo: a `.homebrews` dotfile should drive what is installed
 ################################################################################
 
 say "Installing phantomjs"
