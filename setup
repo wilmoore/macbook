@@ -77,6 +77,10 @@ else
   brew update
   brew upgrade
   
+  say  'Add the following to your $PATH and $MANPATH respectively'
+  say  "$HOMEBREW_PREFIX/bin"
+  say  "$HOMEBREW_PREFIX/share/man"
+  
   pass "homebrew install successful"
 fi
 
