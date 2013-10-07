@@ -192,6 +192,9 @@ fi
 say "Tapping homebrew-php"
   brew tap josegonzalez/homebrew-php
 
+say "Installing PHP"
+  brew install php55
+
 ################################################################################
 # TODO (other programming language environments)
 ################################################################################
