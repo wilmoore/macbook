@@ -2,9 +2,19 @@
 
 Prepares a Mac running OS X Mountain Lion for polyglot software development with idempotency (i.e. run it as many times as you like...no harm will be done).
 
-## What is this and who is it for?
+## Install
 
-If you've found boxen but were afraid of it because it seems complicated, this is probably for you. This is somewhat like boxen, but **without** a complicated configuration managament tool (i.e. Puppet) calling the shots. When I initially started this, I thought I was going to use ansible because it is much simpler than Puppet or Chef; however, I quickly realized, that was silly. Most of these installations are super simple, I'm only ever going to perform the install on a macbook (would you ever go from developing on a mac to anything else?), and even with a fancy tool, you'd have to find a special plugin or write it yourself to achieve idempotency (the main claim to fame of these CM tools).
+### 1. Get XCode
+
+[![Xcode - Apple](http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-lrg.gif)](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&uo=4)
+
+### 2. Download "Command Line Tools"
+  
+  XCode > Preferences > Downloads
+
+### 3. Run Setup
+
+    % bash < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
 
 ## What's in here?
 
@@ -19,21 +29,6 @@ If you've found boxen but were afraid of it because it seems complicated, this i
     - nvm / Node.js
     - chruby / Ruby
     - php-version / PHP
-
-
-## Install
-
-### 1. Get XCode
-
-[![Xcode - Apple](http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-lrg.gif)](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&uo=4)
-
-### 2. Download "Command Line Tools"
-  
-  XCode > Preferences > Downloads
-
-### 3. Run Setup
-
-    % bash < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
 
 ## Inspiration
 
