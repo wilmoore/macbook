@@ -1,6 +1,6 @@
-# System setup for polyglot developers
+# Developer System Setup for Mac OS X
 
-Automated system setup for developers with idempotency (i.e. run it as many times as you like...no harm will be done).
+Prepares a Mac running OS X Mountain Lion for polyglot software development with idempotency (i.e. run it as many times as you like...no harm will be done).
 
 ## What is this and who is it for?
 
@@ -22,6 +22,16 @@ If you've found boxen but were afraid of it because it seems complicated, this i
 
 
 ## Install
+
+### 1. Get XCode
+
+[![Xcode - Apple](http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-lrg.gif)](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&uo=4)
+
+### 2. Download "Command Line Tools"
+  
+  XCode > Preferences > Downloads
+
+### 3. Run Setup
 
     % bash < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
 
