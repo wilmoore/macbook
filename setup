@@ -9,9 +9,6 @@
 #  - install homebrew formulae
 #
 # Todo:
-#
-#  - if a url does not respond, do not continue:
-#  (i.e. curl -sI https://raw.github.com/wilmoore/dotfiles/master/setup | grep -E '^HTTP/' | awk '{ print $NF }')
 #  - run w/ a parameter to honor username or use defaults (wilmoore)
 #
 # This is meant to be invoked via:
@@ -46,20 +43,20 @@ fail () {
 # install dotfiles from `github.com/wilmoore/dotfiles`
 ################################################################################
 
-bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
+bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup) || fail "unable to install dotfiles"
 
 ################################################################################
 # install homebrew @ $HOME
 ################################################################################
 
-bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go)
+bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go) || fail "unable to install homebrew"
 
 ################################################################################
 # install homebrew formulae via $HOME/.ontaprc
 ################################################################################
 
 say "Preparing to install homebrew formulae via $HOME/.ontaprc"
-  curl -sSL https://raw.github.com/wilmoore/ontap/master/ontap.sh > $TMPDIR/ontap.sh
+  curl -sSL https://raw.github.com/wilmoore/ontap/master/ontap.sh > $TMPDIR/ontap.sh || fail "unable to install homebrew"
   source $TMPDIR/ontap.sh
   ontap
 
