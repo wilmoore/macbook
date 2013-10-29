@@ -1,21 +1,19 @@
 ################################################################################
 # System Bootstrap
 # Wil Moore III <wil.moore@wilmoore.com>
-# 
+#
 # Tasks:
 #
 #  - install dotfiles from `github.com/wilmoore/dotfiles`
 #  - install homebrew
-#  - install core utilities via homebrew
-#  - install version managers for programming languages
-#  - install programming languages
+#  - install homebrew formulae
 #
 # Todo:
-#  
+#
 #  - if a url does not respond, do not continue:
 #  (i.e. curl -sI https://raw.github.com/wilmoore/dotfiles/master/setup | grep -E '^HTTP/' | awk '{ print $NF }')
 #  - run w/ a parameter to honor username or use defaults (wilmoore)
-# 
+#
 # This is meant to be invoked via:
 # bash < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
 ################################################################################
@@ -57,133 +55,13 @@ bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
 bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go)
 
 ################################################################################
-# tap homebrew dupes
+# install homebrew formulae via $HOME/.ontaprc
 ################################################################################
 
-say "Tapping dupes"
-  brew tap --repair homebrew/dupes 2>/dev/null | head -1 | grep -sqE '^Pruned 0' || brew tap homebrew/dupes
-
-################################################################################
-# tap homebrew binaries
-################################################################################
-
-say "Tapping binaries"
-  brew tap --repair wilmoore/homebrew-binaries 2>/dev/null | head -1 | grep -sqE '^Pruned 0' || brew tap wilmoore/homebrew-binaries
-
-################################################################################
-# install core tools via homebrew
-# todo: a `.homebrews` dotfile should drive what is installed
-################################################################################
-
-say "Installing phantomjs"
-  brew install phantom-js
-  
-say "Installing ag for better code search"
-  brew install ag
-
-say "Installing tree for viewing directory hierarchies"
-  brew install tree
-
-say "Installing wget"
-  brew install wget
-
-say "Installing git"
-  brew install git
-
-say "Installing vim"
-  brew install vim macvim vimpager
-
-say "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
-  brew install ctags
-
-say "Installing tmux, to save project state and switch between projects ..."
-  brew install tmux
-
-say "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compatibility with tmux ..."
-  brew install reattach-to-user-namespace
-
-say "Installing watch, to execute a program periodically and show the output ..."
-  brew install watch
-
-################################################################################
-# install programming languages (ruby-build + chruby) => Ruby
-################################################################################
-  
-say "Installing chruby and ruby-install, to install rubies"
-  brew install ruby-build chruby
-  [[ ! -d ~/.rubies/2.0.0-p247 ]] && ruby-build 2.0.0-p247 ~/.rubies/2.0.0-p247
-
-################################################################################
-# install programming languages (nvm) => Node.js
-################################################################################
-
-say "Preparing to install nvm (Node.js version manager)"
-
-NVM_ROOT=$HOME/.nvm
-
-if [[ -d $NVM_ROOT ]]; then
-  say "nvm seems to have been previously installed...preparing to update!"
-  
-  cd $NVM_ROOT
-  
-  git pull 2>/dev/null
-  
-  if [[ $? ]]; then
-    pass "nvm updated succesfully"
-  else
-    fail "failed to update ($NVM_ROOT)"
-  fi
-  
-else
-  git clone https://github.com/creationix/nvm.git $NVM_ROOT 2>/dev/null
-  
-  if [[ $? ]]; then
-    pass "installed succesfully"
-  else
-    fail "failed to install nvm to ($NVM_ROOT)"
-  fi
-
-  say "In order to load nvm, you'll need to add 'source $NVM_ROOT/nvm.sh' to your shell profile"
-    
-  if [[ -f $NVM_ROOT/nvm.sh ]]; then
-    say "Preparing to install latest version of node"
-  
-    source $NVM_ROOT/nvm.sh
-  
-    LATEST_NODE=$(nvm ls-remote | tail -1)
-    
-    nvm install $LATEST_NODE
-    
-    say "Making Node version the default"
-    
-    nvm alias default $LATEST_NODE
-    nvm use default
-  fi
-fi
-
-################################################################################
-# # install programming languages (homebrew-php) => PHP
-################################################################################
-
-say "Tapping homebrew-php"
-  brew tap --repair josegonzalez/homebrew-php 2>/dev/null | head -1 | grep -sqE '^Pruned 0' || brew tap josegonzalez/homebrew-php
-  
-say "Installing PHP"
-  brew install php55 --without-pear --without-apache --with-pgsql --with-fpm  --with-intl
-  brew unlink php55
-
-################################################################################
-# TODO (other programming language environments)
-################################################################################
-
-# scala
-# clojure
-# erlang
-# elixir
-# lua
-# perl
-# groovy
-# mono (F#, C#)
+say "Preparing to install homebrew formulae via $HOME/.ontaprc"
+  curl -sSL https://raw.github.com/wilmoore/ontap/master/ontap.sh > $TMPDIR/ontap.sh
+  source $TMPDIR/ontap.sh
+  ontap
 
 ################################################################################
 # system update
@@ -201,3 +79,4 @@ say  "sudo reboot"
 say  ""
 
 pass "system setup successfully completed"
+
