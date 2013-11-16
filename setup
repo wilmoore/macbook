@@ -62,6 +62,7 @@ bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go) || fai
 ################################################################################
 
 sudo easy_install pip
+sudo pip install dexy docutils
 
 ################################################################################
 # install homebrew formulae via $HOME/.ontaprc
