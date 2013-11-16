@@ -58,6 +58,12 @@ bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup) || fail 
 bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go) || fail "unable to install homebrew"
 
 ################################################################################
+# install pip for python
+################################################################################
+
+sudo easy_install pip
+
+################################################################################
 # install homebrew formulae via $HOME/.ontaprc
 ################################################################################
 
