@@ -67,9 +67,9 @@ sudo easy_install pip
 # install homebrew formulae via $HOME/.ontaprc
 ################################################################################
 
-say "Preparing to install homebrew formulae via $HOME/.taplist"
+say "Preparing to install homebrew formulae via $HOME/.brewrc"
   set +e
-  brew bundle $HOME/.taplist
+  brew bundle $HOME/.brewrc
   set -e
 
 ################################################################################
