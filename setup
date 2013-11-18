@@ -62,23 +62,22 @@ bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go) || fai
 ################################################################################
 
 sudo easy_install pip
-sudo pip install dexy docutils
 
 ################################################################################
 # install homebrew formulae via $HOME/.ontaprc
 ################################################################################
 
-say "Preparing to install homebrew formulae via $HOME/.ontaprc"
-  curl -sSL https://raw.github.com/wilmoore/ontap/master/ontap.sh > $TMPDIR/ontap.sh || fail "unable to install homebrew"
-  source $TMPDIR/ontap.sh
-  ontap
+say "Preparing to install homebrew formulae via $HOME/.taplist"
+  set +e
+  brew bundle $HOME/.taplist
+  set -e
 
 ################################################################################
 # system update
 ################################################################################
 
 say "Preparing to install system updates"
-  sudo softwareupdate -i -a
+  sudo softwareupdate -i -a || fail "failed to complete system updates"
 
 ################################################################################
 # fin
