@@ -7,7 +7,6 @@
 #  - install dotfiles from `github.com/wilmoore/dotfiles`
 #  - install homebrew
 #  - install python pip
-#  - install homebrew formulae
 #
 # Todo:
 #  - run w/ a parameter to honor username or use defaults (wilmoore)
@@ -47,31 +46,17 @@ fail () {
 sudo -v
 
 ################################################################################
-# install dotfiles from `github.com/wilmoore/dotfiles`
+# bootstrap
 ################################################################################
 
+# install dotfiles from `github.com/wilmoore/dotfiles`
 bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup) || fail "unable to install dotfiles"
 
-################################################################################
 # install homebrew @ $HOME
-################################################################################
-
 bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go) || fail "unable to install homebrew"
 
-################################################################################
 # install pip for python
-################################################################################
-
-sudo easy_install pip
-
-################################################################################
-# install homebrew formulae via $HOME/.ontaprc
-################################################################################
-
-say "Preparing to install homebrew formulae via $HOME/.brewrc"
-  set +e
-  brew bundle $HOME/.brewrc
-  set -e
+sudo easy_install pip || fail "unable to install pip"
 
 ################################################################################
 # system update
