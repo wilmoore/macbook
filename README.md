@@ -12,9 +12,19 @@ NOTE: On Mavericks (or higher), you can optionally skip steps #1 and #2; as the 
 
 ### 2. Download "Command Line Tools"
 
-  XCode > Preferences > Downloads
+Open Xcode
 
-### 3. Agree tot he Xcode/iOS license
+    % open -a Xcode
+    
+Navigate to "Downloads" with the following steps:
+
+- Press `command + ,` to open "Preferences" pane.
+- Click the "Downloads" tab (second to last tab).
+- Select "Command Line Tools" and confirm to install.
+
+### 3. Agree to the Xcode/iOS license
+
+If you have skipped #2, you'll need to agree to the license:
 
     % sudo xcodebuild -license
 
