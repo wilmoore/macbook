@@ -12,7 +12,7 @@
 #  - run w/ a parameter to honor username or use defaults (wilmoore)
 #
 # This is meant to be invoked via:
-# bash < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
+# bash < <(curl -s https://raw.githubusercontent.com/wilmoore/system/master/setup)
 ################################################################################
 
 set -e
