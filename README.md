@@ -14,7 +14,7 @@
 
 ### 3. Run Setup
 
-    % bash < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
+    % bash < <(curl -s https://raw.githubusercontent.com/wilmoore/system/master/setup)
 
 ## What's in here?
 
