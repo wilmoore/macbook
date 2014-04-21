@@ -34,7 +34,8 @@ If you have skipped #2, you'll need to agree to the license:
 
 ### 5. Install Dotfiles
 
-    % bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
+    % git clone https://github.com/wilmoore/dotfiles /tmp/dotfiles
+    % bash /tmp/dotfiles/setup
 
 ## What's in here?
 
