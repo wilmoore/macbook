@@ -4,17 +4,33 @@
 
 ## Install
 
-### 1. Get XCode
+NOTE: On Mavericks (or higher), you can optionally skip steps #1 and #2; as the Xcode command-line tools are already installed. That being said, I personally like to install full XCode.
+
+### 1. Get/Install XCode
 
 [![Xcode - Apple](http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-lrg.gif)](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&uo=4)
 
 ### 2. Download "Command Line Tools"
 
-  XCode > Preferences > Downloads
+Open Xcode
 
-### 3. Run Setup
+    % open -a Xcode
+    
+Navigate to "Downloads" with the following steps:
 
-    % bash < <(curl -s https://raw.github.com/wilmoore/system/master/setup)
+- Press `command + ,` to open "Preferences" pane.
+- Click the "Downloads" tab (second to last tab).
+- Select "Command Line Tools" and confirm to install.
+
+### 3. Agree to the Xcode/iOS license
+
+If you have skipped #2, you'll need to agree to the license:
+
+    % sudo xcodebuild -license
+
+### 4. Run Setup
+
+    % bash < <(curl -s https://raw.githubusercontent.com/wilmoore/system/master/setup)
 
 ## What's in here?
 
