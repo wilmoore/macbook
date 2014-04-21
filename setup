@@ -49,21 +49,11 @@ sudo -v
 # bootstrap
 ################################################################################
 
-# install dotfiles from `github.com/wilmoore/dotfiles`
-bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup) || fail "unable to install dotfiles"
-
 # install homebrew @ $HOME
 bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go) || fail "unable to install homebrew"
 
-# install pip for python
-sudo easy_install pip || fail "unable to install pip"
-
-################################################################################
-# system update
-################################################################################
-
-say "Preparing to install system updates"
-  sudo softwareupdate -i -a || fail "failed to complete system updates"
+# install dotfiles from `github.com/wilmoore/dotfiles`
+bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup) || fail "unable to install dotfiles"
 
 ################################################################################
 # fin
