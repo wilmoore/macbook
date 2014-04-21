@@ -15,7 +15,7 @@ NOTE: On Mavericks (or higher), you can optionally skip steps #1 and #2; as the 
 Open Xcode
 
     % open -a Xcode
-    
+
 Navigate to "Downloads" with the following steps:
 
 - Press `command + ,` to open "Preferences" pane.
@@ -28,15 +28,18 @@ If you have skipped #2, you'll need to agree to the license:
 
     % sudo xcodebuild -license
 
-### 4. Run Setup
+### 4. Install Homebrew
 
-    % bash < <(curl -s https://raw.githubusercontent.com/wilmoore/system/master/setup)
+    % bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go)
+
+### 5. Install Dotfiles
+
+    % bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
 
 ## What's in here?
 
 - [dotfiles]
 - [homebrew]
-- pip (python)
 - Mac OSX system updates
 
 ## Inspiration
@@ -50,3 +53,4 @@ If you have skipped #2, you'll need to agree to the license:
 
 [dotfiles]: https://github.com/wilmoore/dotfiles
 [homebrew]: https://github.com/wilmoore/homebrew-home
+
