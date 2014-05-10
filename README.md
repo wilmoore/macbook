@@ -4,7 +4,7 @@
 
 ## Install
 
-NOTE: On Mavericks (or higher), you can optionally skip steps #1 and #2; as the Xcode command-line tools are already installed. That being said, I personally like to install full XCode.
+NOTE: On Mavericks (or higher), you can optionally skip steps #1 and #2; as the Xcode command-line tools are pre-loaded and just need to be installed.
 
 ### 1. Get/Install XCode
 
@@ -27,10 +27,14 @@ Navigate to "Downloads" with the following steps:
 If you have skipped #2, you'll need to agree to the license:
 
     % sudo xcodebuild -license
+    % sudo xcode-select --install
 
 ### 4. Install Homebrew
 
     % bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go)
+    % brew install python
+    
+    NOTE: Homebrew's python will make your life easier.
 
 ### 5. Install Dotfiles
 
