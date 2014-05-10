@@ -34,7 +34,7 @@ If you have skipped #2, you'll need to agree to the license:
     % bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go)
     % brew install python
     
-    NOTE: Homebrew's python will make your life easier.
+NOTE: Homebrew's python will make your life easier.
 
 ### 5. Install Dotfiles
 
