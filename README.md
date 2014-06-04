@@ -1,6 +1,6 @@
 # Developer System Setup for Mac OS X
 
-> Prepares a Mac running OS X Mountain Lion (or higher) for polyglot software development. Run as many times as you like...no harm will be done (idempotency).
+> A list of steps that I go through to get a new machine with OS X Mountain Lion (or higher) bootstrapped for polyglot software development. Until there is a blessed way to automate Xcode install, the first couple steps will continue to be manual.
 
 ## Install
 
