@@ -4,7 +4,7 @@
 
 ## Install
 
-NOTE: On Mavericks (or higher), you can optionally skip steps #1 and #2; as the Xcode command-line tools are pre-loaded and just need to be installed.
+NOTE: On Mavericks (or higher), you can optionally skip steps #1 and #2; as the Xcode command-line tools are pre-loaded and just need to be installed. Open the `Terminal` app, then type `make` which will cause a prompt to be invoked which asks if you'd like to install the full Xcode or just the command line tools (i.e. just select **Install** if you do not need Xcode).
 
 ### 1. Get/Install XCode
 
