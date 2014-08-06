@@ -35,7 +35,7 @@ Choose "Get Xcode" and the **App Store** will open displaying an option to insta
 
 ## 6. Install Dotfiles
 
-    % bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
+    % bash < <(curl -sL https://raw.github.com/wilmoore/dotfiles/master/setup)
 
 ## References
 
