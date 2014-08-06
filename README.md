@@ -1,41 +1,43 @@
 # Developer System Setup for Mac OS X
 
-> Prepares a Mac running OS X Mountain Lion (or higher) for polyglot software development. Run as many times as you like...no harm will be done (idempotency).
+> Prepares a Mac running OS X Mavericks (or higher) for polyglot software development. Run as many times as you like...no harm will be done (idempotency).
 
 ## Install
 
-NOTE: On Mavericks (or higher), you can optionally skip steps #1 and #2; as the Xcode command-line tools are already installed. That being said, I personally like to install full XCode.
+### 0. Remap the CAPS LOCK key to CONTROL
 
-### 1. Get/Install XCode
+If you are using the VIM or Emacs editor, you'll want to do this:
 
-[![Xcode - Apple](http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-lrg.gif)](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&uo=4)
+1. COMMAND + SPACE (to open spotlight).
+2. Type `System Preferences` (then press enter), then `Keyboard` (into the search box).
+3. Press the __Modifier Keys…__ button (bottom right corner).
+4. Change the action for **CAPS LOCK** Key to **Control**.
 
-### 2. Download "Command Line Tools"
+### 1. Install Xcode and the command-line developer tools [![Xcode - Apple](http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-lrg.gif)](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&uo=4)
 
-Open Xcode
+Enter a command in the terminal that requires Xcode Command Line Tools which will result in you being prompted to install the required software:
 
-    % open -a Xcode
+        % make
 
-Navigate to "Downloads" with the following steps:
+   ![](https://cloudup.com/cxrqLVUkX6f+)
 
-- Press `command + ,` to open "Preferences" pane.
-- Click the "Downloads" tab (second to last tab).
-- Select "Command Line Tools" and confirm to install.
+Choose "Get Xcode" and the **App Store** will open displaying an option to install **Xcode**. You aren't required to "Get Xcode"; you could proceed by selecting "Install" for the Xcode Command Line Tools; however, I recommend getting the full "Xcode" as I've always found this to be the smoothest option.
 
-### 3. Agree to the Xcode/iOS license
-
-If you have skipped #2, you'll need to agree to the license:
+### 2. Agree to the Xcode/iOS license
 
     % sudo xcodebuild -license
 
-### 4. Install Homebrew
+### 3. Install Homebrew
 
-    % bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go)
+    % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
+
+### 4. Install ZSH
+
+    % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/activate-homebrew-zsh)
 
 ### 5. Install Dotfiles
 
-    % git clone https://github.com/wilmoore/dotfiles /tmp/dotfiles
-    % bash /tmp/dotfiles/setup
+    % bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
 
 ## What's in here?
 
