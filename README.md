@@ -2,9 +2,7 @@
 
 > Prepares a Mac running OS X Mavericks (or higher) for polyglot software development. Run as many times as you like...no harm will be done (idempotency).
 
-## Install
-
-### 0. Remap the CAPS LOCK key to CONTROL
+## 1. Remap the CAPS LOCK key to CONTROL
 
 If you are using the VIM or Emacs editor, you'll want to do this:
 
@@ -13,7 +11,7 @@ If you are using the VIM or Emacs editor, you'll want to do this:
 3. Press the __Modifier Keys…__ button (bottom right corner).
 4. Change the action for **CAPS LOCK** Key to **Control**.
 
-### 1. Install Xcode and the command-line developer tools [![Xcode - Apple](http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-lrg.gif)](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&uo=4)
+## 2. Install Xcode and the command-line developer tools [![Xcode - Apple](http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-lrg.gif)](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&uo=4)
 
 Enter a command in the terminal that requires Xcode Command Line Tools which will result in you being prompted to install the required software:
 
@@ -23,27 +21,26 @@ Enter a command in the terminal that requires Xcode Command Line Tools which wil
 
 Choose "Get Xcode" and the **App Store** will open displaying an option to install **Xcode**. You aren't required to "Get Xcode"; you could proceed by selecting "Install" for the Xcode Command Line Tools; however, I recommend getting the full "Xcode" as I've always found this to be the smoothest option.
 
-### 2. Agree to the Xcode/iOS license
+## 3. Agree to the Xcode/iOS license
 
     % sudo xcodebuild -license
 
-### 3. Install Homebrew
+## 4. Install Homebrew
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
 
-### 4. Install ZSH
+## 5. Install ZSH
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/activate-homebrew-zsh)
 
-### 5. Install Dotfiles
+## 6. Install Dotfiles
 
     % bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
 
-## What's in here?
+## References
 
 - [dotfiles]
 - [homebrew]
-- Mac OSX system updates
 
 ## Inspiration
 
