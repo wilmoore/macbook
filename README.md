@@ -13,13 +13,13 @@ If you are using the VIM or Emacs editor, you'll want to do this:
 
 ## 2. Install Xcode and the command-line developer tools [![Xcode - Apple](http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-lrg.gif)](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&uo=4)
 
-Enter a command in the terminal that requires Xcode Command Line Tools which will result in you being prompted to install the required software:
+Type the following command in a terminal:
 
-        % make
+        % xcode-select --install
 
    ![](https://cloudup.com/cxrqLVUkX6f+)
 
-Choose "Get Xcode" and the **App Store** will open displaying an option to install **Xcode**. You aren't required to "Get Xcode"; you could proceed by selecting "Install" for the Xcode Command Line Tools; however, I recommend getting the full "Xcode" as I've always found this to be the smoothest option.
+Choose "Get Xcode" and the **App Store** will open displaying an option to install **Xcode**. You may proceed by selecting "Install" for the Xcode Command Line Tools; however, I recommend getting the full "Xcode".
 
 ## 3. Agree to the Xcode/iOS license
 
