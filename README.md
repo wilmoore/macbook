@@ -40,6 +40,11 @@ Choose "Get Xcode" and the **App Store** will open displaying an option to insta
 ## 6. Install Homebrew Bundle(s)
 
     % brew bundle-dir
+    
+## 7. Install Ruby, Node
+
+    % ruby-install ruby
+    % nvm install 0.11
 
 ## References
 
