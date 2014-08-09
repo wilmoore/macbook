@@ -37,11 +37,11 @@ Choose "Get Xcode" and the **App Store** will open displaying an option to insta
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/dotfiles/master/setup)
 
-## 6. Install Homebrew Bundle(s)
+## 7. Install Homebrew Bundle(s)
 
     % brew bundle-dir
     
-## 7. Install Ruby, Node
+## 8. Install Ruby, Node
 
     % ruby-install ruby
     % nvm install 0.11
