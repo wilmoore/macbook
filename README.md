@@ -1,6 +1,6 @@
 # Developer System Setup for Mac OS X
 
-> Prepares a Mac running OS X Mavericks (or higher) for polyglot software development. Run as many times as you like...no harm will be done (idempotency).
+> Prepares a Mac running OS X Mavericks (or higher) for polyglot software development. Similar to Boxen, but easier for me to grok (I'm a simple man).
 
 ## 1. Remap the CAPS LOCK key to CONTROL
 
@@ -37,14 +37,18 @@ Choose "Get Xcode" and the **App Store** will open displaying an option to insta
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/dotfiles/master/setup)
 
-## 7. Install Homebrew Bundle(s)
+## 7. Install Software from Brewfile(s)
+
+[Example .brewfile](http://git.io/vrgfLw)
 
     % brew bundle-dir
-    
+
 ## 8. Install Ruby, Node
 
-    % ruby-install ruby
+    % ruby-install --rubies-dir $XDG_DATA_HOME/rubies ruby
     % nvm install 0.11
+
+NOTE: other programming languages are taken care of via the Brewfile(s).
 
 ## References
 
