@@ -62,6 +62,10 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/dotfiles/master/setup)
 
+### Install Powerline
+
+    % pip install --user git+git://github.com/Lokaltog/powerline
+
 ## 7. Install Software from Brewfile(s)
 
 [See My .brewfile](http://git.io/vrgfLw)
