@@ -31,6 +31,14 @@ Choose "Get Xcode" and the **App Store** will open displaying an option to insta
 Type the following command in a terminal then follow the prompts to accept the license agreements:
 
     % sudo xcodebuild -license
+    
+You may test that all is well by typing the following in a terminal:
+
+    % make
+    
+Assuming there is no `makefile` in your current directory, you should see the following output:
+
+    make: *** No targets specified and no makefile found.  Stop.
 
 ## 4. Install Homebrew
 
