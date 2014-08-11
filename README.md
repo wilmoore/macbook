@@ -73,6 +73,13 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
 NOTE: other programming languages are taken care of via the Brewfile(s).
 
+## 9. Manual Configurations
+
+Open the following programs and set them to start on login:
+
+- slate
+- ...
+
 ## References
 
 - [dotfiles]
