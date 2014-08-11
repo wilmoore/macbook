@@ -50,6 +50,12 @@ NOTE: While this is the same homebrew you'd get from [brew.sh](http://brew.sh), 
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/activate-homebrew-zsh)
 
+You may test that all is well by typing the following in a __NEW__ terminal (window or tab):
+
+    % echo $SHELL
+
+Assuming everything went well, you should see a path output that ends with `zsh`:
+
 ## 6. Install Dotfiles
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/dotfiles/master/setup)
