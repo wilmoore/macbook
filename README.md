@@ -11,7 +11,7 @@ If you are using the VIM or Emacs editor, you'll want to do this:
 3. Press the __Modifier Keys…__ button (bottom right corner).
 4. Change the action for **CAPS LOCK** Key to **Control**.
 
-## 2. Install Xcode and the command-line developer tools [![Xcode - Apple](http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-lrg.gif)](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&uo=4)
+## 2. Install Xcode and the command-line developer tools
 
 Type the following command in a terminal:
 
