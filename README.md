@@ -1,4 +1,4 @@
-# Developer System Setup for Mac OS X
+# Mac OS X setup for developers
 
 > Prepares a Mac running OS X Mavericks (or higher) for polyglot software development. Similar to Boxen, but easier for me to grok (I'm a simple man).
 
