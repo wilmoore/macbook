@@ -1,6 +1,6 @@
 # Mac OS X setup for developers
 
-> Prepares a Mac running OS X Mavericks (or higher) for polyglot software development. Similar to Boxen, but easier for me to grok (I'm a simple man).
+> Prepares a Mac running OS X Mavericks for polyglot software development.
 
 ## 1. Remap the CAPS LOCK key to CONTROL
 
