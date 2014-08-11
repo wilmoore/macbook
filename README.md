@@ -56,9 +56,15 @@ You may test that all is well by typing the following in a __NEW__ terminal (win
 
 Assuming everything went well, you should see a path output that ends with `zsh`:
 
-## 6. Install Dotfiles
+## 6. Shell Configuration
+
+### Install Dotfiles
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/dotfiles/master/setup)
+
+### Install Vim Plugins
+
+    % vim +NeoBundleInstall +qall
 
 ## 7. Install Software from Brewfile(s)
 
