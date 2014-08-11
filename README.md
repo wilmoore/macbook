@@ -24,7 +24,7 @@ Choose "Get Xcode" and the **App Store** will open displaying an option to insta
 ### Items of note
 
 - You will need a free Apple ID in order to proceed.
-- This takes a while so go grab your favorite beverage, visit the restroom, check email, then come back.
+- This takes a while so go grab your favorite beverage, visit the restroom, check email/irc, then come back.
 
 ## 3. Agree to the Xcode/iOS license
 
