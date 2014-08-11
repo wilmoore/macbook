@@ -21,7 +21,10 @@ Type the following command in a terminal:
 
 Choose "Get Xcode" and the **App Store** will open displaying an option to install **Xcode**. You may proceed by selecting "Install" for the Xcode Command Line Tools; however, I recommend getting the full "Xcode".
 
-NOTE: You will need a free Apple ID in order to proceed.
+### Items of note
+
+- You will need a free Apple ID in order to proceed.
+- This takes a while so go grab your favorite beverage, visit the restroom, check email, then come back.
 
 ## 3. Agree to the Xcode/iOS license
 
