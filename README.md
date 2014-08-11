@@ -62,13 +62,9 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/dotfiles/master/setup)
 
-### Install Vim Plugins
-
-    % vim +NeoBundleInstall +qall
-
 ## 7. Install Software from Brewfile(s)
 
-[Example .brewfile](http://git.io/vrgfLw)
+[See My .brewfile](http://git.io/vrgfLw)
 
     % brew bundle-dir
 
@@ -79,7 +75,11 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
 NOTE: other programming languages are taken care of via the Brewfile(s).
 
-## 9. Manual Configurations
+## 9. Install Vim Plugins
+
+    % vim +NeoBundleInstall +qall
+
+## 10. Manual Configurations
 
 Open the following programs and set them to start on login:
 
