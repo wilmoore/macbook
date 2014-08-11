@@ -40,11 +40,11 @@ Assuming there is no `makefile` in your current directory, you should see the fo
 
     make: *** No targets specified and no makefile found.  Stop.
 
-## 4. Install Homebrew
+## 4. Install Homebrew and Git
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
     
-NOTE: While this is the same homebrew you'd get from [brew.sh](http://brew.sh), this one simply installs to `$HOME/.homebrew` for [reasons outlined here](https://github.com/wilmoore/homebrew-home/wiki/Rationale).
+NOTE: While this is the same homebrew you'd get from [brew.sh](http://brew.sh), this one simply installs to `$HOME/.homebrew` for [reasons outlined here](https://github.com/wilmoore/homebrew-home/wiki/Rationale) and installs homebrew provided `git(1)`.
 
 ## 5. Install ZSH
 
