@@ -28,6 +28,8 @@ Choose "Get Xcode" and the **App Store** will open displaying an option to insta
 
 ## 3. Agree to the Xcode/iOS license
 
+Type the following command in a terminal then follow the prompts to accept the license agreements:
+
     % sudo xcodebuild -license
 
 ## 4. Install Homebrew
