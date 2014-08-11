@@ -31,7 +31,7 @@ NOTE: You will need a free Apple ID in order to proceed.
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
     
-NOTE: While this is the same homebrew you'd get from [brew.sh][http://brew.sh], this one simply installs to `$HOME/.homebrew` for [reasons outlined here](https://github.com/wilmoore/homebrew-home/wiki/Rationale).
+NOTE: While this is the same homebrew you'd get from [brew.sh](http://brew.sh), this one simply installs to `$HOME/.homebrew` for [reasons outlined here](https://github.com/wilmoore/homebrew-home/wiki/Rationale).
 
 ## 5. Install ZSH
 
