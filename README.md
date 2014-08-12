@@ -66,6 +66,16 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/dotfiles/master/setup)
 
+### Install Terminal Theme
+
+    % open "$HOME/.config/terminal/solarized-dark-xterm-256-source-code-pro-powerline.terminal"
+    % exit
+    
+- Manually navigate to the **Preferences...** pane
+- Select "solarized-dark-xterm-256-source-code-pro-powerline"
+- Hit the "default" button
+- Exit Terminal
+
 ### Install Powerline
 
     % pip install --user git+git://github.com/Lokaltog/powerline
