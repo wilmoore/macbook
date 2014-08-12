@@ -97,12 +97,10 @@ NOTE: other programming languages are taken care of via the Brewfile(s).
 
     % vim +NeoBundleInstall +qall
 
-## 10. Manual Configurations
+## 10. Mac OS X Settings and Preferences
 
-Open the following programs and set them to start on login:
-
-- slate
-- ...
+    % cd ~
+    % curl --user "$GITHUB_USER:$GITHUB_PASS" -L# https://github.com/$GITHUB_USER/macbook-settings/archive/master.tar.gz | tar xz
 
 ## References
 
