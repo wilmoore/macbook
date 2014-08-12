@@ -19,7 +19,11 @@ Type the following command in a terminal:
 
    ![](https://cloudup.com/cxrqLVUkX6f+)
 
-Choose "Get Xcode" and the **App Store** will open displaying an option to install **Xcode**. You may proceed by selecting "Install" for the Xcode Command Line Tools; however, I recommend getting the full "Xcode".
+Choose "Get Xcode" and the **App Store** will open displaying an option to install **Xcode**. Once **Xcode** installation is complete, repeat the above command but this time, choose "Install" for the Xcode Command Line Tools.
+
+        % xcode-select --install
+
+   ![](https://cloudup.com/cxrqLVUkX6f+)
 
 ### Items of note
 
