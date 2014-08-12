@@ -95,7 +95,7 @@ NOTE: other programming languages are taken care of via the Brewfile(s).
 ## 10. Mac OS X Settings and Preferences
 
     % cd ~
-    % curl --user "wilmoore:???" -L# https://github.com/wilmoore/macbook-settings/archive/master.tar.gz | tar xz --strip-components=1
+    % curl --user "wilmoore:???" -L# https://github.com/wilmoore/macbook-settings/archive/master.tar.gz | tar xz --strip-components=1 --exclude=README.md
 
 ## References
 
