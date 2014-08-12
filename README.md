@@ -2,14 +2,9 @@
 
 > Prepares a Mac running OS X Mavericks for polyglot software development.
 
-## 1. Remap the CAPS LOCK key to CONTROL
+## 1. Initialize Basic Mac OS X Settings
 
-If you are using the VIM or Emacs editor, you'll want to do this:
-
-1. COMMAND + SPACE (to open spotlight).
-2. Type `System Preferences` (then press enter), then `Keyboard` (into the search box).
-3. Press the __Modifier Keys…__ button (bottom right corner).
-4. Change the action for **CAPS LOCK** Key to **Control**.
+    % ~/.config/init/macbook
 
 ## 2. Install Xcode and the command-line developer tools
 
