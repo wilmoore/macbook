@@ -2,11 +2,7 @@
 
 > Prepares a Mac running OS X Mavericks for polyglot software development.
 
-## 1. Initialize Basic Mac OS X Settings
-
-    % ~/.config/init/macbook
-
-## 2. Install Xcode and the command-line developer tools
+## 1. Install Xcode and the command-line developer tools
 
 Type the following command in a terminal, then choose "Get Xcode" and the **App Store** will open displaying an option to install **Xcode**:
 
@@ -25,7 +21,7 @@ Once **Xcode** installation is complete, repeat the above command but this time,
 - You will need a free Apple ID in order to proceed.
 - This takes a while so go grab your favorite beverage, visit the restroom, check email/irc, then come back.
 
-## 3. Agree to the Xcode/iOS license
+## 2. Agree to the Xcode/iOS license
 
 Type the following command in a terminal then follow the prompts to accept the license agreements:
 
@@ -39,13 +35,13 @@ Assuming there is no `makefile` in your current directory, you should see the fo
 
     make: *** No targets specified and no makefile found.  Stop.
 
-## 4. Install Homebrew and Git
+## 3. Install Homebrew and Git
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
     
 NOTE: While this is the same homebrew you'd get from [brew.sh](http://brew.sh), this one simply installs to `$HOME/.homebrew` for [reasons outlined here](https://github.com/wilmoore/homebrew-home/wiki/Rationale) and installs homebrew provided `git(1)`.
 
-## 5. Install ZSH
+## 4. Install ZSH
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/activate-homebrew-zsh)
 
@@ -55,7 +51,7 @@ You may test that all is well by typing the following in a __NEW__ terminal (win
 
 Assuming everything went well, you should see a path output that ends with `zsh`:
 
-## 6. Shell Configuration
+## 5. Shell Configuration
 
 ### Install Dotfiles
 
@@ -75,22 +71,26 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
     % pip install --user git+git://github.com/Lokaltog/powerline
 
-## 7. Install Software from Brewfile(s)
+## 6. Install Software from Brewfile(s)
 
 [See My .brewfile](http://git.io/vrgfLw)
 
     % brew bundle-dir
 
-## 8. Install Ruby, Node
+## 7. Install Ruby, Node
 
     % ruby-install --rubies-dir $XDG_DATA_HOME/rubies ruby
     % nvm install 0.11
 
 NOTE: other programming languages are taken care of via the Brewfile(s).
 
-## 9. Install Vim Plugins
+## 8. Install Vim Plugins
 
     % vim +NeoBundleInstall +qall
+
+## 9. Initialize Basic Mac OS X Settings
+
+    % ~/.config/init/macbook
 
 ## 10. Mac OS X Settings and Preferences
 
