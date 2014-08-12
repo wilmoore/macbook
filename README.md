@@ -69,11 +69,11 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 ### Install Terminal Theme
 
     % open "$HOME/.config/terminal/solarized-dark-xterm-256-source-code-pro-powerline.terminal"
-    % exit
     
+- A new terminal window will open,  
 - Manually navigate to the **Preferences...** pane
-- Select "solarized-dark-xterm-256-source-code-pro-powerline"
-- Hit the "default" button
+- Select __solarized-dark-xterm-256-source-code-pro-powerline__
+- Hit the **Default** button
 - Exit Terminal
 
 ### Install Powerline
