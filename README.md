@@ -73,9 +73,9 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
 ## 6. Install Software from Brewfile(s)
 
-[See My .brewfile](http://git.io/vrgfLw)
-
     % brew bundle-dir
+
+NOTE: You can have a look at [My .brewfile](http://git.io/vrgfLw) to get an idea of what software will be installed.
 
 ## 7. Install Ruby, Node
 
