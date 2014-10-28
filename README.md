@@ -73,6 +73,7 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
 ## 6. Install Software from Brewfile(s)
 
+    % brew install https://raw.githubusercontent.com/Homebrew/homebrew-boneyard/master/cmd/brew-bundle-dir.rb
     % brew bundle-dir
 
 NOTE: You can have a look at [My .brewfile](http://git.io/vrgfLw) to get an idea of what software will be installed.
