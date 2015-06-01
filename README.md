@@ -71,19 +71,9 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
     % pip install --user git+git://github.com/Lokaltog/powerline
 
-## 6. Install Software from Brewfile(s)
+## 6. Install Software
 
-    % brew install https://raw.githubusercontent.com/Homebrew/homebrew-boneyard/master/cmd/brew-bundle-dir.rb
-    % brew bundle-dir
-
-NOTE: You can have a look at [My .brewfile](http://git.io/vrgfLw) to get an idea of what software will be installed.
-
-## 7. Install Ruby, Node
-
-    % ruby-install --rubies-dir $XDG_DATA_HOME/rubies ruby
-    % nvm install 0.11
-
-NOTE: other programming languages are taken care of via the Brewfile(s).
+    % software
 
 ## 8. Install Vim Plugins
 
