@@ -26,11 +26,11 @@ Once **Xcode** installation is complete, repeat the above command but this time,
 Type the following command in a terminal then follow the prompts to accept the license agreements:
 
     % sudo xcodebuild -license
-    
+
 You may test that all is well by typing the following in a terminal:
 
     % make
-    
+
 Assuming there is no `makefile` in your current directory, you should see the following output:
 
     make: *** No targets specified and no makefile found.  Stop.
@@ -38,7 +38,7 @@ Assuming there is no `makefile` in your current directory, you should see the fo
 ## 3. Install Homebrew and Git
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
-    
+
 NOTE: While this is the same homebrew you'd get from [brew.sh](http://brew.sh), this one simply installs to `$HOME/.homebrew` for [reasons outlined here](https://github.com/wilmoore/homebrew-home/wiki/Rationale) and installs homebrew provided `git(1)`.
 
 ## 4. Install ZSH
@@ -59,8 +59,8 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
 ### Install Terminal Theme
 
-    % open "$HOME/.config/terminal/solarized-dark-xterm-256-source-code-pro-powerline.terminal"
-    
+    % open "$HOME/.config/terminal/modified/solarized-dark-xterm-256-source-code-pro-powerline.terminal"
+
 - A new terminal window will open,  
 - Manually navigate to the **Preferences...** pane
 - Select __solarized-dark-xterm-256-source-code-pro-powerline__
