@@ -59,11 +59,11 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
 ### Install Terminal Theme
 
-    % open "$HOME/.config/terminal/modified/solarized-dark-xterm-256-source-code-pro-powerline.terminal"
+    % open "$HOME/.config/terminal/modified/terminal-ocean-dark-base16.terminal"
 
 - A new terminal window will open,  
 - Manually navigate to the **Preferences...** pane
-- Select __solarized-dark-xterm-256-source-code-pro-powerline__
+- Select __terminal-ocean-dark-base16__
 - Hit the **Default** button
 - Exit Terminal
 
