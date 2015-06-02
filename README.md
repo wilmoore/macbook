@@ -35,13 +35,17 @@ Assuming there is no `makefile` in your current directory, you should see the fo
 
     make: *** No targets specified and no makefile found.  Stop.
 
-## 3. Install Homebrew and Git
+## 3. OSX Developer Default Settings
+
+    % bash < <(curl -sL https://raw.githubusercontent.com/matthewmueller/dots/master/os/osx/defaults.sh)
+
+## 4. Install Homebrew and Git
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
 
 NOTE: While this is the same homebrew you'd get from [brew.sh](http://brew.sh), this one simply installs to `$HOME/.homebrew` for [reasons outlined here](https://github.com/wilmoore/homebrew-home/wiki/Rationale) and installs homebrew provided `git(1)`.
 
-## 4. Install ZSH
+## 5. Install ZSH
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/activate-homebrew-zsh)
 
@@ -51,7 +55,7 @@ You may test that all is well by typing the following in a __NEW__ terminal (win
 
 Assuming everything went well, you should see a path output that ends with `zsh`:
 
-## 5. Shell Configuration
+## 6. Shell Configuration
 
 ### Install Dotfiles
 
@@ -67,11 +71,7 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 - Hit the **Default** button
 - Exit Terminal
 
-### Install Powerline
-
-    % pip install --user git+git://github.com/Lokaltog/powerline
-
-## 6. Install Software
+## 7. Install Software
 
     % software
 
@@ -95,6 +95,7 @@ Assuming everything went well, you should see a path output that ends with `zsh`
 
 ## Inspiration
 
+- [Hacker's Guide to Setting up Your Mac](http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac)
 - [2011 Rubyist’s guide to a Mac OS X development environment](http://robots.thoughtbot.com/post/8700977975/2011-rubyists-guide-to-a-mac-os-x-development)
 - [boxen](https://github.com/boxen/our-boxen)
 
