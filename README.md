@@ -48,6 +48,7 @@ Assuming there is no `makefile` in your current directory, you should see the fo
 ## 5. Initialize Basic Mac OS X Settings
 
     % ~/.config/init/macbook
+    % bash < <(curl -sL https://raw.githubusercontent.com/matthewmueller/dots/master/os/osx/defaults.sh)
 
 ## 6. Install Terminal Theme
 
