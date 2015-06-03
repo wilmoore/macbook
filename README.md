@@ -35,58 +35,29 @@ Assuming there is no `makefile` in your current directory, you should see the fo
 
     make: *** No targets specified and no makefile found.  Stop.
 
-## 3. OSX Developer Default Settings
+## 3. Install Software (Homebrew, etc)
 
-    % bash < <(curl -sL https://raw.githubusercontent.com/matthewmueller/dots/master/os/osx/defaults.sh)
+    % software
 
-## 4. Install Homebrew and Git
-
-    % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
-
-NOTE: While this is the same homebrew you'd get from [brew.sh](http://brew.sh), this one simply installs to `$HOME/.homebrew` for [reasons outlined here](https://github.com/wilmoore/homebrew-home/wiki/Rationale) and installs homebrew provided `git(1)`.
-
-## 5. Install ZSH
-
-    % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/activate-homebrew-zsh)
-
-You may test that all is well by typing the following in a __NEW__ terminal (window or tab):
-
-    % echo $SHELL
-
-Assuming everything went well, you should see a path output that ends with `zsh`:
-
-## 6. Shell Configuration
+## 4. Shell Configuration
 
 ### Install Dotfiles
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/dotfiles/master/setup)
 
-### Install Terminal Theme
-
-    % open "$HOME/.config/terminal/modified/terminal-ocean-dark-base16.terminal"
-
-- A new terminal window will open,  
-- Manually navigate to the **Preferences...** pane
-- Select __terminal-ocean-dark-base16__
-- Hit the **Default** button
-- Exit Terminal
-
-## 7. Install Software
-
-    % software
-
-## 8. Install Vim Plugins
-
-    % vim +NeoBundleInstall +qall
-
-## 9. Initialize Basic Mac OS X Settings
+## 5. Initialize Basic Mac OS X Settings
 
     % ~/.config/init/macbook
 
-## 10. Mac OS X Settings and Preferences
+## 6. Install Terminal Theme
 
-    % cd ~
-    % curl --user "wilmoore:???" -L# https://github.com/wilmoore/macbook-settings/archive/master.tar.gz | tar xz --strip-components=1 --exclude=README.md
+    % open "$HOME/.config/terminal/modified/spacegray-source-code-pro-14.terminal"
+
+- A new terminal window will open,  
+- Manually navigate to the **Preferences...** pane
+- Select __spacegray-source-code-pro-14__
+- Hit the **Default** button
+- Exit Terminal
 
 ## References
 
